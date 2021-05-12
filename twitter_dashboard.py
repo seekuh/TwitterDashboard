@@ -20,7 +20,7 @@ layout="centered"
 )
 
 # Connection Twitter API
-creds = encrypt.decrypt_file('src/twitter.key', 'src/twitter_credentials.json')
+creds = encrypt.decrypt_file('twitter.key', 'twitter_credentials.json')
 creds = json.loads(creds.decode('utf-8'))
 
 auth = OAuthHandler(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'])
@@ -52,32 +52,31 @@ def main():
   page = st.sidebar.selectbox('Choose a page', ["Homepage", "Twitter Dashboard", "Explore Analytics Functions"])
 
   if page == 'Homepage':
-    set_png_as_page_bg('src/hackathon.png')
+    set_png_as_page_bg('background.png')
 
     st.text("")
     st.text("")
     st.text("")
 
-    st.title('Nerdy Birdies')
-    st.title("BWI Hackathon 2020")
-
+    st.title('Twitter Analyse Dashboard')
+    st.title('Big Data Consulting Project SS21')
 
     st.text("")
     st.text("")
     st.text("")
 
     expander = st.beta_expander("Who are we?")
-    expander.write("Little birds trying to bring order into the chaotic world of Twitter!")
+    expander.write("A student trying to bring order into the chaotic world of Twitter!")
 
     expander2 = st.beta_expander("What are we doing?")
-    expander2.write("We are combining our passions for NLP, unstructured data and statistics to get insights of social dynamics. Complex interconnections in simple visualizations.")
+    expander2.write("Trying to get good grades by combining NLP methods, analysis on unstructured data and statistics to get insights of social dynamics. Complex interconnections in simple visualizations BLA.")
 
     expander3 = st.beta_expander("Why?")
-    expander3.write("Because we love it!")
+    expander3.write("Because I have to")
 
   
   elif page == 'Explore Analytics Functions':
-    set_png_as_page_bg('src/hackathon.png')
+    set_png_as_page_bg('background2.png')
 
     st.text("")
     st.text("")
@@ -135,7 +134,7 @@ def main():
 
 
   elif page == 'Twitter Dashboard':
-    #set_png_as_page_bg('hackathon.png')
+    set_png_as_page_bg('background2.png')
     
     st.text("")
     st.text("")

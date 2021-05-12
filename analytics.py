@@ -20,7 +20,7 @@ sentiment_model = pipeline('sentiment-analysis',
                    model = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment"))
 ner_model = spacy.load('en_core_web_lg')
 desaster_model = pickle.load(open("desaster_multinomial_NB.sav", 'rb'))
-tfidf = pickle.load(open('src/feature.pkl', 'rb'))
+tfidf = pickle.load(open('feature.pkl', 'rb'))
 with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
